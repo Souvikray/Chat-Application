@@ -4,6 +4,14 @@ from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
 
 BUFSIZ = 1024
+'''
+When a database is accessed by multiple connections, and one of the processes modifies the database, 
+the SQLite database is locked until that transaction is committed. The timeout parameter specifies 
+how long the connection should wait for the lock to go away until raising an exception. 
+The default for the timeout parameter is 5.0 (five seconds).
+By default, check_same_thread is True and only the creating thread may use the connection. 
+If set False, the returned connection may be shared across multiple threads. 
+'''
 # connect to the database
 db = sqlite3.connect("ChatDB", check_same_thread=False, timeout=5)
 # get a cursor

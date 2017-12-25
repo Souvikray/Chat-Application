@@ -1,4 +1,4 @@
-I am going to build a chat application where any numbers of users can join in and chat with each other.This application works using sockets and no third party dependencies are required.
+I am going to build a chat application where any numbers of users can join in and chat with each other.This application works using sockets and no third party dependencies are required.The application also has a database support so that whenever you restart the application, you can retrieve your last chat history.
 
 Let us first go through certain basics of networking
 
